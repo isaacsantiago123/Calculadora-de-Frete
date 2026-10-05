@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Frete Express | Calculadora de Frete</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         CABEÇALHO
+    ========================== -->
+
+    <header class="header">
+
+        <div class="logo">
+
+            Frete<span>Express</span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="#inicio">
+                Início
+            </a>
+
+            <a href="#calcular">
+                Calcular frete
+            </a>
+
+            <a href="#como-funciona">
+                Como funciona
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section id="inicio" class="hero">
+
+        <div class="hero-content">
+
+            <span class="tag">
+                CALCULADORA DE FRETE
+            </span>
+
+
+            <h1>
+
+                Descubra quanto
+                <span>vai custar seu frete.</span>
+
+            </h1>
+
+
+            <p>
+
+                Informe o CEP do destino e descubra
+                a distância até a UNINASSAU e o
+                valor estimado do transporte.
+
+            </p>
+
+
+            <a
+                href="#calcular"
+                class="button-primary"
+            >
+                Calcular agora
+            </a>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="hero-icon">
+                🚚
+            </div>
+
+
+            <h3>
+                Cálculo rápido
+            </h3>
+
+
+            <p>
+
+                Consulte o endereço e veja a distância
+                e o valor estimado do frete.
+
+            </p>
+
+
+            <div class="hero-info">
+
+                <span>
+                    📍 Local de origem
+                </span>
+
+                <strong>
+                    UNINASSAU
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CALCULADORA
+    ========================== -->
+
+    <section
+        id="calcular"
+        class="calculator-section"
+    >
+
+        <div class="section-title">
+
+            <span>
+                CALCULE AGORA
+            </span>
+
+
+            <h2>
+                Calcule seu frete
+            </h2>
+
+
+            <p>
+
+                Digite o CEP do local de destino
+                para iniciar o cálculo.
+
+            </p>
+
+        </div>
+
+
+        <div class="calculator">
+
+
+            <!-- FORMULÁRIO -->
+
+            <form id="cepForm">
+
+                <label for="cep">
+
+                    CEP de destino
+
+                </label>
+
+
+                <div class="input-area">
+
+                    <input
+                        type="text"
+                        id="cep"
+                        placeholder="Ex: 60055-400"
+                        maxlength="9"
+                        required
+                    >
+
+
+                    <button type="submit">
+
+                        Calcular
+
+                    </button>
+
+                </div>
+
+
+                <small>
+
+                    Digite apenas um CEP válido
+                    com 8 números.
+
+                </small>
+
+            </form>
+
+
+
+            <!-- LOADING -->
+
+            <div
+                id="loading"
+                class="loading hidden"
+            >
+
+                <div class="spinner"></div>
+
+                <p>
+                    Calculando distância...
+                </p>
+
+            </div>
+
+
+
+            <!-- ERRO -->
+
+            <div
+                id="error"
+                class="error hidden"
+            >
+
+                <strong>
+                    ⚠️ Não foi possível realizar o cálculo.
+                </strong>
+
+                <p id="errorMessage">
+                    Verifique o CEP informado.
+                </p>
+
+            </div>
+
+
+
+            <!-- RESULTADO -->
+
+            <div
+                id="result"
+                class="result hidden"
+            >
+
+                <div class="result-header">
+
+                    <div>
+
+                        <span>
+                            DESTINO
+                        </span>
+
+                        <h3 id="address">
+                            -
+                        </h3>
+
+                    </div>
+
+                    <div class="success-icon">
+                        ✓
+                    </div>
+
+                </div>
+
+
+                <!-- INFORMAÇÕES -->
+
+                <div class="result-grid">
+
+
+                    <div class="result-card">
+
+                        <span>
+                            📍 Origem
+                        </span>
+
+                        <strong>
+                            UNINASSAU
+                        </strong>
+
+                    </div>
+
+
+                    <div class="result-card">
+
+                        <span>
+                            🏠 Destino
+                        </span>
+
+                        <strong id="destination">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="result-card">
+
+                        <span>
+                            🛣️ Distância
+                        </span>
+
+                        <strong id="distance">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="result-card highlight">
+
+                        <span>
+                            💰 Frete estimado
+                        </span>
+
+                        <strong id="price">
+                            -
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <p class="disclaimer">
+
+                    * O valor apresentado é uma estimativa
+                    baseada na distância calculada e na
+                    tarifa configurada para o exercício.
+                    O preço real de um serviço de transporte
+                    pode variar.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         COMO FUNCIONA
+    ========================== -->
+
+    <section
+        id="como-funciona"
+        class="how-section"
+    >
+
+        <div class="section-title">
+
+            <span>
+                COMO FUNCIONA
+            </span>
+
+
+            <h2>
+                Três passos simples
+            </h2>
+
+        </div>
+
+
+        <div class="steps">
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <h3>
+                    Informe o CEP
+                </h3>
+
+                <p>
+
+                    Digite o CEP do endereço
+                    onde o pedido será entregue.
+
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <h3>
+                    Calculamos a distância
+                </h3>
+
+                <p>
+
+                    O sistema consulta o endereço
+                    e calcula a distância da UNINASSAU.
+
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <h3>
+                    Veja o valor
+                </h3>
+
+                <p>
+
+                    O sistema calcula uma estimativa
+                    do preço do frete.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
+    <footer>
+
+        <div class="logo">
+
+            Frete<span>Express</span>
+
+        </div>
+
+
+        <p>
+
+            Projeto acadêmico —
+            Atividade 5
+
+        </p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

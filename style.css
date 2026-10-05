@@ -1,0 +1,1044 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================
+   VARIÁVEIS
+========================= */
+
+:root {
+
+    --primary: #2563eb;
+
+    --primary-dark: #1d4ed8;
+
+    --background: #f8fafc;
+
+    --white: #ffffff;
+
+    --text: #172033;
+
+    --text-light: #64748b;
+
+    --border: #e2e8f0;
+
+    --green: #16a34a;
+
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        var(--background);
+
+    color:
+        var(--text);
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+
+    height: 75px;
+
+    padding:
+        0 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+        var(--white);
+
+    border-bottom:
+        1px solid var(--border);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+}
+
+
+.logo {
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+}
+
+
+.logo span {
+
+    color:
+        var(--primary);
+
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 30px;
+
+}
+
+
+nav a {
+
+    text-decoration: none;
+
+    color:
+        var(--text-light);
+
+    font-size: 14px;
+
+    transition: 0.3s;
+
+}
+
+
+nav a:hover {
+
+    color:
+        var(--primary);
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 580px;
+
+    padding:
+        90px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 60px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #ffffff
+        );
+
+}
+
+
+.hero-content {
+
+    max-width: 650px;
+
+}
+
+
+.tag {
+
+    color:
+        var(--primary);
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(45px, 6vw, 70px);
+
+    line-height: 1.05;
+
+    margin:
+        18px 0 25px;
+
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+    color:
+        var(--primary);
+
+}
+
+
+.hero-content > p {
+
+    max-width: 570px;
+
+    color:
+        var(--text-light);
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+.button-primary {
+
+    display: inline-block;
+
+    padding:
+        14px 24px;
+
+    background:
+        var(--primary);
+
+    color:
+        white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+
+.button-primary:hover {
+
+    background:
+        var(--primary-dark);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* =========================
+   HERO CARD
+========================= */
+
+.hero-card {
+
+    width: 350px;
+
+    padding: 35px;
+
+    background:
+        var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.08);
+
+}
+
+
+.hero-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        #dbeafe;
+
+    font-size: 27px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero-card h3 {
+
+    font-size: 23px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.hero-card > p {
+
+    color:
+        var(--text-light);
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero-info {
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid var(--border);
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.hero-info span {
+
+    color:
+        var(--text-light);
+
+    font-size: 13px;
+
+}
+
+
+.hero-info strong {
+
+    margin-top: 4px;
+
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.calculator-section,
+.how-section {
+
+    padding:
+        100px 7%;
+
+}
+
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+
+}
+
+
+.section-title span {
+
+    color:
+        var(--primary);
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.section-title h2 {
+
+    font-size: 40px;
+
+    margin:
+        10px 0;
+
+}
+
+
+.section-title p {
+
+    color:
+        var(--text-light);
+
+}
+
+
+/* =========================
+   CALCULADORA
+========================= */
+
+.calculator {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    background:
+        var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 40px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.06);
+
+}
+
+
+/* FORMULÁRIO */
+
+#cepForm label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+}
+
+
+.input-area {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+.input-area input {
+
+    flex: 1;
+
+    padding:
+        15px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 16px;
+
+}
+
+
+.input-area input:focus {
+
+    border-color:
+        var(--primary);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, 0.1);
+
+}
+
+
+.input-area button {
+
+    padding:
+        0 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+        var(--primary);
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.input-area button:hover {
+
+    background:
+        var(--primary-dark);
+
+}
+
+
+#cepForm small {
+
+    display: block;
+
+    margin-top: 7px;
+
+    color:
+        var(--text-light);
+
+    font-size: 12px;
+
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.loading {
+
+    text-align: center;
+
+    padding:
+        35px 0;
+
+}
+
+
+.spinner {
+
+    width: 35px;
+
+    height: 35px;
+
+    margin: auto auto 12px;
+
+    border:
+        4px solid #dbeafe;
+
+    border-top-color:
+        var(--primary);
+
+    border-radius: 50%;
+
+    animation:
+        spin 0.8s linear infinite;
+
+}
+
+
+@keyframes spin {
+
+    to {
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
+
+/* =========================
+   ESCONDER
+========================= */
+
+.hidden {
+
+    display: none;
+
+}
+
+
+/* =========================
+   ERRO
+========================= */
+
+.error {
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    background:
+        #fef2f2;
+
+    border:
+        1px solid #fecaca;
+
+    color:
+        #991b1b;
+
+}
+
+
+.error p {
+
+    font-size: 14px;
+
+    margin-top: 5px;
+
+}
+
+
+/* =========================
+   RESULTADO
+========================= */
+
+.result {
+
+    margin-top: 35px;
+
+    padding-top: 30px;
+
+    border-top:
+        1px solid var(--border);
+
+}
+
+
+.result-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.result-header span {
+
+    color:
+        var(--primary);
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+}
+
+
+.result-header h3 {
+
+    margin-top: 5px;
+
+    font-size: 20px;
+
+}
+
+
+.success-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        #dcfce7;
+
+    color:
+        var(--green);
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================
+   GRID DO RESULTADO
+========================= */
+
+.result-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.result-card {
+
+    padding: 20px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+}
+
+
+.result-card span {
+
+    color:
+        var(--text-light);
+
+    font-size: 13px;
+
+}
+
+
+.result-card strong {
+
+    font-size: 18px;
+
+}
+
+
+.result-card.highlight {
+
+    background:
+        #eff6ff;
+
+    border-color:
+        #bfdbfe;
+
+}
+
+
+.result-card.highlight strong {
+
+    color:
+        var(--primary);
+
+    font-size: 24px;
+
+}
+
+
+/* =========================
+   OBSERVAÇÃO
+========================= */
+
+.disclaimer {
+
+    margin-top: 20px;
+
+    color:
+        var(--text-light);
+
+    font-size: 12px;
+
+}
+
+
+/* =========================
+   COMO FUNCIONA
+========================= */
+
+.how-section {
+
+    background:
+        var(--white);
+
+}
+
+
+.steps {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+
+}
+
+
+.step {
+
+    text-align: center;
+
+    padding: 25px;
+
+}
+
+
+.step-number {
+
+    width: 55px;
+
+    height: 55px;
+
+    margin:
+        0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        #dbeafe;
+
+    color:
+        var(--primary);
+
+    font-weight: bold;
+
+}
+
+
+.step h3 {
+
+    margin-bottom: 10px;
+
+}
+
+
+.step p {
+
+    color:
+        var(--text-light);
+
+    font-size: 14px;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    padding:
+        30px 7%;
+
+    background:
+        #0f172a;
+
+    color:
+        white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+footer p {
+
+    color:
+        #94a3b8;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 850px) {
+
+    nav {
+
+        display: none;
+
+    }
+
+
+    .hero {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .hero-card {
+
+        width: 100%;
+
+        max-width: 400px;
+
+    }
+
+
+    .steps {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .header {
+
+        padding:
+            0 5%;
+
+    }
+
+
+    .hero {
+
+        padding:
+            75px 5%;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 45px;
+
+    }
+
+
+    .calculator-section,
+    .how-section {
+
+        padding:
+            70px 5%;
+
+    }
+
+
+    .calculator {
+
+        padding: 25px;
+
+    }
+
+
+    .input-area {
+
+        flex-direction: column;
+
+    }
+
+
+    .input-area button {
+
+        padding: 14px;
+
+    }
+
+
+    .result-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    footer {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+
+    }
+
+}
